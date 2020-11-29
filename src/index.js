@@ -52,7 +52,7 @@ registerBlockType( 'create-block/dark-image-switcher', {
 	 * Blocks are grouped into categories to help users browse and discover them.
 	 * The categories provided by core are `common`, `embed`, `formatting`, `layout` and `widgets`.
 	 */
-	category: 'widgets',
+	category: 'layout',
 
 	/**
 	 * An icon property should be specified to make it easier to identify a block.
@@ -67,6 +67,13 @@ registerBlockType( 'create-block/dark-image-switcher', {
 		// Removes support for an HTML mode.
 		html: false,
 	},
+
+	attributes: {
+        lightImage: {
+            type: 'string',
+            default: null, // no image by default!
+        }
+    },
 
 	/**
 	 * @see ./edit.js

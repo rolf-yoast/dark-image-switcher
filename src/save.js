@@ -14,13 +14,16 @@ import { __ } from '@wordpress/i18n';
  *
  * @return {WPElement} Element to render.
  */
-export default function save() {
+export default function save( attributes ) {
+
+const { lightImage } = attributes;
+
 	return (
-		<p>
+		<span>
 			{ __(
 				'Dark Image Switcher – hello from the saved content!',
 				'dark-image-switcher'
 			) }
-		</p>
+		</span>
 	);
 }

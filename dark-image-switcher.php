@@ -36,13 +36,13 @@ function create_block_dark_image_switcher_block_init() {
 	);
 	wp_set_script_translations( 'create-block-dark-image-switcher-block-editor', 'dark-image-switcher' );
 
-	$editor_css = 'build/index.css';
-	wp_register_style(
-		'create-block-dark-image-switcher-block-editor',
-		plugins_url( $editor_css, __FILE__ ),
-		array(),
-		filemtime( "$dir/$editor_css" )
-	);
+	// $editor_css = 'build/index.css';
+	// wp_register_style(
+	// 	'create-block-dark-image-switcher-block-editor',
+	// 	plugins_url( $editor_css, __FILE__ ),
+	// 	array(),
+	// 	filemtime( "$dir/$editor_css" )
+	// );
 
 	$style_css = 'build/style-index.css';
 	wp_register_style(
@@ -54,7 +54,7 @@ function create_block_dark_image_switcher_block_init() {
 
 	register_block_type( 'create-block/dark-image-switcher', array(
 		'editor_script' => 'create-block-dark-image-switcher-block-editor',
-		'editor_style'  => 'create-block-dark-image-switcher-block-editor',
+		//'editor_style'  => 'create-block-dark-image-switcher-block-editor',
 		'style'         => 'create-block-dark-image-switcher-block',
 	) );
 }
